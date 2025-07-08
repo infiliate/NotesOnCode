@@ -1,0 +1,61 @@
+# Planet Relative Gravity
+mercury = 0.38
+venus = 0.91
+mars = 0.38
+jupiter = 2.53
+saturn = 1.07
+uranus = 0.89
+neptune = 1.14
+
+# Primary input
+
+weight = float(input('what is your weight on Earth? '))
+
+# Secondary input
+
+print('\namong these planets you want to calculate for which planet: ')
+print('1) Mercury')
+print('2) Venus')
+print('3) Mars')
+print('4) Jupiter')
+print('5) saturn')
+print('6) Uranus')
+print('7) Neptune')
+
+planet = int(input('choose 1 among 1-7'))
+
+# possiblities
+
+if planet == 1:
+  weight = weight * mercury
+elif planet == 2:
+  weight = weight * venus
+elif planet == 3:
+  weight = weight * mars
+elif planet == 4: 
+  weight = weight * jupiter
+elif planet == 5:
+  weight = weight * saturn
+elif planet == 6:
+  weight = weight * uranus
+elif planet == 7:
+  weight = weight * neptune
+else:
+  print('Invalid planet number')
+
+# Answer
+
+if planet == 1:
+  print(f"Your Weight weight in mercury would be {weight}")
+elif planet == 2:
+  print(f"Your Weight weight in Venus would be {weight}")
+elif planet == 3:
+  print(f"Your Weight weight in Mars would be {weight}")
+elif planet == 4: 
+  print(f"Your Weight weight in Jupiter would be {weight}")
+elif planet == 5:
+  print(f"Your Weight weight in Saturn would be {weight}")
+elif planet == 6:
+  print(f"Your Weight weight in Uranus would be {weight}")
+elif planet == 7:
+  print(f"Your Weight weight in Neptune would be {weight}")

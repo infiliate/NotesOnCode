@@ -1,0 +1,3 @@
+og_temp = 73
+celcius_temp = (og_temp  - 32) / 1.8
+print(celcius_temp)

@@ -1,0 +1,6 @@
+# playing with pythgorean Equation
+a = int(input("write the value of a: "))
+b = int(input("write the value of b: "))
+c = (a ** 2 + b ** 2) ** 0.5
+
+print(f"here is your value of C: {c}")

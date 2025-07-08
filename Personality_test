@@ -1,0 +1,64 @@
+# Introdution: This program asks you Questions and gives you a pesonality you aligned to most, out of 3 the answer will not be random.
+
+# Personalities
+
+Machivillian = 0
+Narccissist = 0
+Psychopath = 0
+
+# Questions
+
+print("Welcome to the Personality Test!")
+print("your first question is: are you willing to do anything to get what you want? (yes/no)")
+
+print("1. yes")
+print("2. no")
+
+answer1 = int(input(("Enter the number of your answer: ")))
+              
+if answer1 == 1:
+    Machivillian = Machivillian + 1
+elif answer1 == 2:
+    Machivillian = Machivillian - 1
+else:
+    print("Invalid input, please enter 1 or 2.")
+
+print("\nyour second question is: do you think you are better than others? (yes/no)")
+print("1. yes")
+print("2. no")
+
+answer2 = int(input("Enter the number of your answer: "))
+
+if answer2 == 1:
+    Narccissist = Narccissist + 1
+elif answer2 == 2:
+    Narccissist = Narccissist - 1   
+else:
+    print("Invalid input, please enter 1 or 2.")
+
+print("\nyour third question is: do you feel no remorse for your actions? (yes/no)")
+print("1. yes")
+print("2. no")
+
+answer3 = int(input("Enter the number of your answer: "))
+if answer3 == 1:
+    Psychopath = Psychopath + 1 
+elif answer3 == 2:
+    Psychopath = Psychopath - 1
+else:
+    print("Invalid input, please enter 1 or 2.")
+
+
+print("\nCalculating your personality...")
+
+# Determine the personality type based on scores
+if Machivillian > 0 and Narccissist <= 0 and Psychopath <= 0:
+    personality = "Machivillian"
+elif Narccissist > 0 and Machivillian <= 0 and Psychopath <= 0:
+    personality = "Narccissist"
+elif Psychopath > 0 and Machivillian <= 0 and Narccissist <= 0:
+    personality = "Psychopath"
+else:
+    personality = "None of the above"
+    
+print(f"\nYour personality type is: {personality}")

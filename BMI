@@ -1,0 +1,5 @@
+mass = 45
+height = 1.7 ** 2
+calculated_bmi = mass / height
+
+print(calculated_bmi)

@@ -1,0 +1,35 @@
+# I need to create a program that helps kids of what is the percentage in 100 out of 700 marks, and also assigns a A Grade, below 90 is A, below 80 is B, below 70 is C, >= 60 is D and below > 60 is F
+
+english = int(input("how many marks you scored in English? "))
+hindi = int(input("how many marks you scored in Hindi? "))
+sst = int(input("how many marks you scored in SST? "))
+punjabi = int(input("how many marks you scored in Punjabi? "))
+math = int(input("how many marks you scored in Math? "))
+sceince = int(input("how many marks you scored in Sceince? "))
+IT = int(input("how many marks you scored in IT? "))
+
+your_grade = english + hindi + sst + punjabi + sceince + IT + math
+
+print(f"The sum of all your subject out of 700 is {your_grade}")
+
+total_marks = 700
+percentage = 100
+grade = percentage * (your_grade / total_marks)
+
+messege = "you have gotten: "
+messege2 = "we are sorry, "
+
+print(f"your percentage is {grade}")
+
+if grade > 90:
+  print(f"{messege} A ")
+elif grade > 80:
+  print(f"{messege}B")
+elif grade > 70:
+  print(f"{messege}C")
+elif grade > 60:
+  print(F"{messege}D")
+else: 
+  print (F"{messege2} {messege}F")
+
+print("Thank you for using the School Percentage Converter!")

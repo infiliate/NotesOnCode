@@ -1,15 +1,19 @@
-# Introduction: a school calculator that takes a list of marks you got in a list of subjects and calculates the total of it. and gets percentage out of 100.
+# let me create a calculate that calculates the percentage of your marks from all the subjects you have, it will ask your subjects number, then will ask that many times you mark and then evaulate it.
 
-name_subjects = int(input("Enter the number of subjects you wanna calculate marks for: "))
+# main varible
+subjects_num = int(input("How many subjects you have? "))
 
 marks = []
-for i in range(name_subjects):
-    mark = float(input(f"Enter marks for subject {i+1}: "))
-    marks.append(mark)
 
-total_marks = sum(marks)
-percentage = (total_marks / (name_subjects * 100)) * 100
+# the loop that repeats itself, so here we will use for loop
 
-print(f"Total marks: {total_marks}")
-print(f"Percentage: {percentage:.2f}%")
+for x in range(subjects_num): # this will repeat by the times, user has inputted number
+    mark = float(input(f"How many marks you scored in subject {x+1}")) # this will added a text string that is loop range + 1
+    marks = marks.append(mark) # So this will add list the number got from this loop to marks
 
+total_marks = sum(marks) # this will added all the numbers from the marks list and eventually create total number of marks
+
+calculation = (total_marks / subjects_num * 100) * 100 # the formula to get average is p/q*100, here there was, no q because user given 7, so to make out of 700, we had multiply
+
+print(f"Total Marks: {total_marks}")
+print("Your Percentage: {calculation:.2f}%") # .2f = decimal point fixed to 2.

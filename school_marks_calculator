@@ -8,12 +8,13 @@ marks = []
 # the loop that repeats itself, so here we will use for loop
 
 for x in range(subjects_num): # this will repeat by the times, user has inputted number
-    mark = float(input(f"How many marks you scored in subject {x+1}")) # this will added a text string that is loop range + 1
-    marks = marks.append(mark) # So this will add list the number got from this loop to marks
+    mark = float(input(f"How many marks you scored in subject {x+1}: ")) # this will added a text string that is loop range + 1
+    marks.append(mark) # So this will add list the number got from this loop to marks
 
 total_marks = sum(marks) # this will added all the numbers from the marks list and eventually create total number of marks
 
-calculation = (total_marks / subjects_num * 100) * 100 # the formula to get average is p/q*100, here there was, no q because user given 7, so to make out of 700, we had multiply
+calculation = (total_marks / (subjects_num * 100)) * 100
+# the formula to get average is p/q*100, here there was, no q because user given 7, so to make out of 700, we had multiply
 
 print(f"Total Marks: {total_marks}")
-print("Your Percentage: {calculation:.2f}%") # .2f = decimal point fixed to 2.
+print(f"Your Percentage: {calculation:.2f}%") # .2f = decimal point fixed to 2.

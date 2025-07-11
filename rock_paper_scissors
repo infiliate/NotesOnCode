@@ -1,0 +1,38 @@
+# I need to create a Program, that gives user choice to choose a option among three, 
+# then computers gets to choose a number, after that, their decisions are compared and one person one
+
+
+import random # we need a random for computer
+
+# heading
+print("==========\nRock Paper Scissors\n==========")
+
+
+# Variables
+player = int(input("\n1)✊\n2)✋\n3)✌️\nPick a Number: ")) # The choices given to player
+computer = random.randint(1,3) # computers choice
+
+if computer == 1:
+    print("\nComputer Chose: ✊")
+elif computer == 2:
+    print("\nComputer Chose: ✋")
+elif computer == 3:
+    print("\nComputer Chose: ✌️")
+
+if player == 1:
+    print("Player Chose: ✊")
+elif player == 2:
+    print("Player Chose: ✋")
+elif player == 3:
+    print("Player Chose: ✌️")
+else:
+    print("wrong input")
+
+# Evulation of choices
+if player == computer:
+    print("\nA Tie!")
+elif player == 1 and computer == 2 or player == 2 and computer == 3 or player == 3 and computer == 1:
+    print("\nThe Player Won!")
+elif player == 1 and computer == 3 or player == 2 and computer == 1 or player == 3 and computer == 2:
+    print("\nThe Computer Won!")
+
